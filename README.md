@@ -1,4 +1,5 @@
 STEPS TO BUILD THE HTTPD DOCKER IAMGE
+-------------------------------------
 
 Prerequisite:
     Install the git client in client's machine
