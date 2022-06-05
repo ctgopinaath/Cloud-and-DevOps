@@ -5,10 +5,10 @@ Prerequisite:
     
     
 STEP_1: Clone the repository
-    git clone https://github.com/ctgopinaath/httpd.git
+    git clone https://github.com/ctgopinaath/Cloud-and-DevOps.git
 
-STEP_2: Navigate to httpd directory
-    cd httpd
+STEP_2: Identify the Dockerfile contents
+    cat Dockerfile
 
 STEP_3: Build the docker image
     docker build -t <image_name> .
