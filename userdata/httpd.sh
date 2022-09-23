@@ -17,3 +17,35 @@ yum install httpd.x86_64 -y # Install your httpd package
 systemctl start httpd.service #start httpd
 systemctl enable httpd.service # enable httpd
 echo "<h1>Hello World from $(hostname)</h1>" > /var/www/html/index.html  #add the content to web page
+
+
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "redshift:ListDatabases",
+                "redshift:DescribeClusterTracks",
+                "redshift:DescribeEvents",
+                "redshift:CreateSavedQuery",
+                "redshift:ViewQueriesInConsole",
+                "redshift:DescribeClusterDbRevisions",
+                "redshift:ViewQueriesFromConsole",
+                "redshift:ListTables",
+                "redshift:CancelQuery",
+                "redshift:ListSchemas",
+                "redshift:DescribeQuery",
+                "redshift:DescribeNodeConfigurationOptions",
+                "redshift:ListSavedQueries",
+                "redshift:DescribeClusters",
+                "redshift:ExecuteQuery"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
