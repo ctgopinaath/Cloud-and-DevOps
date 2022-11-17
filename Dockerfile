@@ -1,3 +1,4 @@
+#https://docs.docker.com/engine/reference/builder/
 FROM amazonlinux:latest
 RUN yum update -y
 RUN yum install httpd -y
