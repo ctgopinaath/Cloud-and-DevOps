@@ -6,18 +6,18 @@ Prerequisite:
     
     
 STEP_1: Clone the repository
-    git clone https://github.com/ctgopinaath/Cloud-and-DevOps.git
+    Command: git clone https://github.com/ctgopinaath/Cloud-and-DevOps.git
 
 STEP_2: Identify the Dockerfile contents
-    cat Dockerfile
+    Command: #cat Dockerfile
 
 STEP_3: Build the docker image
     docker build -t <image_name> .
-    Ex: docker build -t httpdimage .
+    Command: docker build -t httpdimage .
 
 STEP_4: Verify the docker image
-    docker image ls
+    Command: docker image ls
  
 STEP_5:
     docker run -dit --name <container_name> -p <host_port>:<container_port> <image_name>
-    Ex: docker run -dit --name webserver -p 80:80 httpdimage
+    Command: docker run -dit --name webserver -p 80:80 httpdimage
