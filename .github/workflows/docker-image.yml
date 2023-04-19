@@ -1,0 +1,30 @@
+name: Docker Build and Push
+
+on:
+  push:
+    branches:
+      - main  # Change this to the name of your main branch
+
+env:
+  DOCKER_USERNAME: ctgopinaath
+  DOCKER_PASSWORD: Endockerhub12#
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Docker
+      uses: docker/setup-docker@v2
+      
+    - name: Build Docker image
+      run: docker build -t ${{ env.DOCKER_USERNAME }}/webserver:latest .  # Replace with your desired image name and tag
+      
+    - name: Log in to Docker Hub
+      run: docker login -u ${{ env.DOCKER_USERNAME }} -p ${{ env.DOCKER_PASSWORD }}
+      
+    - name: Push Docker image to Docker Hub
+      run: docker push ${{ env.DOCKER_USERNAME }}webserver:latest  # Replace with your desired image name and tag
