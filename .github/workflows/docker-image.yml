@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up Docker
-      uses: docker/Cloud-and-DevOps@v2
+      uses: docker/ctgopinaath/webserver@v2
       
     - name: Build Docker image
       run: docker build -t ${{ env.DOCKER_USERNAME }}/webserver:latest .  # Replace with your desired image name and tag
