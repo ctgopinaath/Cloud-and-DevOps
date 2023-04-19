@@ -16,9 +16,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Set up Docker
-      uses: docker/ctgopinaath/webserver@v2
       
     - name: Build Docker image
       run: docker build -t ${{ env.DOCKER_USERNAME }}/webserver:latest .  # Replace with your desired image name and tag
